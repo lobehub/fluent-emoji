@@ -1,0 +1,75 @@
+{
+  "name": "@lobehub/fluent-emoji",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Logo assets, favicons, webfonts for LobeHub",
+  "keywords": [
+    "logo",
+    "favicon",
+    "webfont"
+  ],
+  "homepage": "https://github.com/lobehub/fluent-emoji",
+  "bugs": {
+    "url": "https://github.com/lobehub/fluent-emoji/issues/new"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lobehub/fluent-emoji.git"
+  },
+  "license": "MIT",
+  "author": "LobeHub <i@lobehub.com>",
+  "sideEffects": false,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "lint": "eslint \"{src,packages}/**/*.{js,jsx,ts,tsx}\" --fix",
+    "lint:md": "remark . --quiet --frail --output",
+    "prepare": "husky install",
+    "prettier": "prettier -c --write --no-error-on-unmatched-pattern \"**/**\"",
+    "reinstall": "npm run clean && lerna clean && rm -rf node_modules && npm run",
+    "release": "multi-semantic-release",
+    "release:local": "multi-semantic-release --no-ci"
+  },
+  "lint-staged": {
+    "*.md": [
+      "remark --quiet --output --",
+      "prettier --write --no-error-on-unmatched-pattern"
+    ],
+    "*.json": [
+      "prettier --write --no-error-on-unmatched-pattern"
+    ],
+    "*.{js,jsx}": [
+      "prettier --write",
+      "stylelint --fix",
+      "eslint --fix"
+    ],
+    "*.{ts,tsx}": [
+      "prettier --parser=typescript --write",
+      "stylelint --fix",
+      "eslint --fix"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18",
+    "@lobehub/lint": "latest",
+    "@types/node": "latest",
+    "commitlint": "^18",
+    "eslint": "^8",
+    "glob": "^10.3.16",
+    "husky": "^8",
+    "lint-staged": "^15",
+    "multi-semantic-release": "^3",
+    "p-map": "^7.0.2",
+    "remark": "^14",
+    "remark-cli": "^11",
+    "semantic-release": "^21",
+    "sharp": "^0.33.4",
+    "tsx": "^4.10.5",
+    "typescript": "^5"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
