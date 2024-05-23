@@ -2,11 +2,10 @@
   "name": "@lobehub/fluent-emoji",
   "version": "0.0.0",
   "private": true,
-  "description": "Logo assets, favicons, webfonts for LobeHub",
+  "description": "Fluent Emoji are a collection of familiar, friendly, and modern emoji from Microsoft",
   "keywords": [
-    "logo",
-    "favicon",
-    "webfont"
+    "emoji",
+    "fluent-emoji"
   ],
   "homepage": "https://github.com/lobehub/fluent-emoji",
   "bugs": {
