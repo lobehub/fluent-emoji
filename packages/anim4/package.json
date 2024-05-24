@@ -1,0 +1,27 @@
+{
+  "name": "@lobehub/fluent-emoji-anim4",
+  "version": "1.0.0",
+  "description": "Fluent Emoji are a collection of familiar, friendly, and modern emoji from Microsoft",
+  "keywords": [
+    "emoji",
+    "fluent-emoji"
+  ],
+  "homepage": "https://github.com/lobehub/fluent-emoji",
+  "bugs": {
+    "url": "https://github.com/lobehub/fluent-emoji/issues/new"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lobehub/fluent-emoji.git"
+  },
+  "license": "MIT",
+  "author": "LobeHub <i@lobehub.com>",
+  "sideEffects": false,
+  "files": [
+    "assets"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

@@ -22,6 +22,7 @@
     "packages/*"
   ],
   "scripts": {
+    "build": "tsx ./src/groupAnim.ts",
     "lint": "eslint \"{src,packages}/**/*.{js,jsx,ts,tsx}\" --fix",
     "lint:md": "remark . --quiet --frail --output",
     "prepare": "husky install",
