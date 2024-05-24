@@ -2,7 +2,7 @@
 
 <img height="160" src="https://registry.npmmirror.com/@lobehub/assets-logo/1.0.0/files/assets/logo-3d.webp">
 
-<h1>@lobehub/fluent-emoji-anim21</h1>
+<h1>@lobehub/fluent-emoji-anim-1</h1>
 
 Fluent Emoji are a collection of familiar, friendly, and modern emoji from Microsoft.
 
@@ -37,6 +37,6 @@ This project is [MIT](./LICENSE) licensed.
 [github-releasedate-shield]: https://img.shields.io/github/release-date/lobehub/fluent-emoji?labelColor=black&style=flat-square
 [github-stars-link]: https://github.com/lobehub/fluent-emoji/network/stargazers
 [github-stars-shield]: https://img.shields.io/github/stars/lobehub/fluent-emoji?color=ffcb47&labelColor=black&style=flat-square
-[npm-release-link]: https://www.npmjs.com/package/@lobehub/fluent-emoji-anim21
-[npm-release-shield]: https://img.shields.io/npm/v/@lobehub/fluent-emoji-anim21?color=369eff&labelColor=black&logo=npm&logoColor=white&style=flat-square
+[npm-release-link]: https://www.npmjs.com/package/@lobehub/fluent-emoji-anim-1
+[npm-release-shield]: https://img.shields.io/npm/v/@lobehub/fluent-emoji-anim-1?color=369eff&labelColor=black&logo=npm&logoColor=white&style=flat-square
 [profile-url]: https://github.com/lobehub
