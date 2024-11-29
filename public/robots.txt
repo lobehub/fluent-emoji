@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://fluent-emoji.lobehub.com
+Sitemap: https://fluent-emoji.lobehub.com/sitemap.xml

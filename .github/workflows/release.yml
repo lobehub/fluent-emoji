@@ -17,6 +17,12 @@ jobs:
       - name: Install deps
         run: bun i
 
+      - name: CI
+        run: bun run ci
+
+      - name: Test
+        run: bun run test
+
       - name: Build
         run: bun run build
 
@@ -25,3 +31,23 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+#      - name: Build Static
+#        run: bun run build:static
+#
+#      - name: Commit changes
+#        run: |-
+#          git diff
+#          git config --global user.name "lobehubbot"
+#          git config --global user.email "i@lobehub.com"
+#          git add .
+#          git commit -m "✨ feat(auto): Auto build static emojis" || exit 0
+#          git push
+#        env:
+#          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+#
+#      - name: Release Static
+#        run: bun run release:static
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+#          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
