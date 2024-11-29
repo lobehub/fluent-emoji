@@ -15,7 +15,7 @@ const themeConfig: SiteThemeConfig = {
       text: 'Github',
     },
     {
-      link: '/components/lobe-hub',
+      link: '/components/fluent-emoji',
       text: 'Get Started',
       type: 'primary',
     },
@@ -28,7 +28,7 @@ const themeConfig: SiteThemeConfig = {
   },
   apiHeader: {
     docUrl: `{github}/tree/master/src/{atomId}/index.md`,
-    match: ['/components', '/features'],
+    match: ['/components'],
     pkg: name,
     sourceUrl: `{github}/tree/master/src/{atomId}/index.tsx`,
   },
