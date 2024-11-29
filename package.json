@@ -25,7 +25,7 @@
     "es"
   ],
   "scripts": {
-    "build": "npm run build:toc && father build",
+    "build": "father build",
     "build:static": "tsx ./scripts/groupAnim.ts",
     "ci": "npm run lint && npm run type-check",
     "clean": "rm -r es lib dist coverage .dumi/tmp .eslintcache node_modules/.cache",

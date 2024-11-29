@@ -53,7 +53,7 @@ const themeConfig: SiteThemeConfig = {
     discord: 'https://discord.gg/AYFPHvv2jT',
     github: homepage,
   },
-  title: 'Lobe Icons',
+  title: 'Fluent Emoji',
 };
 
 export default defineConfig({
