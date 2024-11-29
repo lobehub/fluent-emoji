@@ -87,6 +87,7 @@
     "dumi": "^2.4.14",
     "dumi-theme-lobehub": "^1.10.9",
     "eslint": "^8.57.1",
+    "father": "^4.5.1",
     "glob": "^10.4.5",
     "husky": "^9.1.7",
     "jsdom": "^23.2.0",
