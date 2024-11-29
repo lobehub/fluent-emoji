@@ -39,7 +39,7 @@
     "prepare": "husky && npm run setup",
     "prettier": "prettier -c --write --no-error-on-unmatched-pattern \"**/**\"",
     "reinstall": "npm run clean && lerna clean && rm -rf node_modules && npm run",
-    "release": "multi-semantic-release",
+    "release": "semantic-release",
     "release:static": "multi-semantic-release",
     "setup": "dumi setup",
     "start": "npm run dev",
