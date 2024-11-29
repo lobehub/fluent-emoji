@@ -1,7 +1,6 @@
 {
   "name": "@lobehub/fluent-emoji",
   "version": "1.0.0",
-  "private": true,
   "description": "Fluent Emoji are a collection of familiar, friendly, and modern emoji from Microsoft",
   "keywords": [
     "emoji",
