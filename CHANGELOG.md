@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 1.2.0](https://github.com/lobehub/fluent-emoji/compare/v1.1.0...v1.2.0)
+
+<sup>Released on **2025-01-07**</sup>
+
+#### ✨ Features
+
+- **misc**: Update antd.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Update antd ([0abd26c](https://github.com/lobehub/fluent-emoji/commit/0abd26c))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 1.1.0](https://github.com/lobehub/fluent-emoji/compare/v1.0.1...v1.1.0)
 
 <sup>Released on **2025-01-06**</sup>
