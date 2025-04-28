@@ -2,6 +2,35 @@
 
 # Changelog
 
+## [Version 1.3.0](https://github.com/lobehub/fluent-emoji/compare/v1.2.0...v1.3.0)
+
+<sup>Released on **2025-04-28**</sup>
+
+#### ✨ Features
+
+- **misc**: Migrate to @lobehub/ui v2 \[force major].
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Migrate to @lobehub/ui v2 \[force major], closes [#4](https://github.com/lobehub/fluent-emoji/issues/4) ([f22a4d2](https://github.com/lobehub/fluent-emoji/commit/f22a4d2))
+
+</details>
+
+#### 💥 BREAKING CHANGES
+
+- **misc**: <https://github.com/lobehub/lobe-ui/pull/322>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 1.2.0](https://github.com/lobehub/fluent-emoji/compare/v1.1.0...v1.2.0)
 
 <sup>Released on **2025-01-07**</sup>
