@@ -1,6 +1,6 @@
 {
   "name": "@lobehub/fluent-emoji",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "Fluent Emoji are a collection of familiar, friendly, and modern emoji from Microsoft",
   "keywords": [
     "emoji",
@@ -73,7 +73,7 @@
   },
   "dependencies": {
     "@lobehub/emojilib": "^1.0.0",
-    "@lobehub/ui": "https://pkg.pr.new/lobehub/lobe-ui/@lobehub/ui@306e573",
+    "@lobehub/ui": "^2.0.0",
     "antd-style": "^3.7.1",
     "emoji-regex": "^10.4.0",
     "lodash-es": "^4.17.21",
@@ -95,7 +95,7 @@
     "commitlint": "^19.8.0",
     "dpdm": "^3.14.0",
     "dumi": "^2.4.20",
-    "dumi-theme-lobehub": "https://pkg.pr.new/lobehub/dumi-theme-lobehub@8546cf3",
+    "dumi-theme-lobehub": "^2.0.0",
     "eslint": "^8.57.1",
     "father": "^4.5.2",
     "glob": "^11.0.1",
