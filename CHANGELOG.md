@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 3.0.0](https://github.com/lobehub/fluent-emoji/compare/v2.0.0...v3.0.0)
+
+<sup>Released on **2025-12-20**</sup>
+
+#### ✨ Features
+
+- **misc**: Bump v3 \[force major].
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Bump v3 \[force major] ([0f2fa8e](https://github.com/lobehub/fluent-emoji/commit/0f2fa8e))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 2.0.0](https://github.com/lobehub/fluent-emoji/compare/v1.2.0...v2.0.0)
 
 <sup>Released on **2025-04-28**</sup>
