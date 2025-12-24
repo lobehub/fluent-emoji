@@ -1,9 +1,8 @@
-import { CopyButton } from '@lobehub/ui';
+import { Center, CopyButton, Flexbox } from '@lobehub/ui';
 import { Typography } from 'antd';
 import { createStyles } from 'antd-style';
 import { capitalize } from 'lodash-es';
 import { ReactNode, memo, useRef } from 'react';
-import { Center, Flexbox } from 'react-layout-kit';
 
 const useStyles = createStyles(({ css, token }) => {
   return {
@@ -12,9 +11,10 @@ const useStyles = createStyles(({ css, token }) => {
 
       overflow: hidden;
 
-      background: ${token.colorBgContainer};
       border: 1px solid ${token.colorBorderSecondary};
       border-radius: ${token.borderRadiusLG}px;
+
+      background: ${token.colorBgContainer};
     `,
     row: css`
       border-block-start: 1px solid ${token.colorFillSecondary};

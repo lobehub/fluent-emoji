@@ -73,12 +73,11 @@
   },
   "dependencies": {
     "@lobehub/emojilib": "^1.0.0",
-    "@lobehub/ui": "^3.1.1",
+    "@lobehub/ui": "^4.1.1",
     "antd-style": "^3.7.1",
     "emoji-regex": "^10.6.0",
     "lodash-es": "^4.17.22",
     "lucide-react": "^0.562.0",
-    "react-layout-kit": "^1.9.2",
     "url-join": "^5.0.0"
   },
   "devDependencies": {
@@ -117,6 +116,7 @@
     "vitest": "~1.2.2"
   },
   "peerDependencies": {
+    "@lobehub/ui": "^3.4.5 || ^4.0.0",
     "antd": "^6.1.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

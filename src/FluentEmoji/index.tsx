@@ -1,8 +1,8 @@
 'use client';
 
+import { Center } from '@lobehub/ui';
 import { ElementType, createElement, forwardRef, useMemo, useState } from 'react';
 import { type HTMLAttributes } from 'react';
-import { Center } from 'react-layout-kit';
 
 import { getFluentEmojiCDN } from '@/getFluentEmojiCDN';
 import { EmojiType } from '@/getFluentEmojiCDN/utils';
