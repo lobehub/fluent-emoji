@@ -1,10 +1,9 @@
 import emojilib from '@lobehub/emojilib';
 import { FluentEmoji, FluentEmojiProps, getFluentEmojiCDN } from '@lobehub/fluent-emoji';
-import { SearchBar } from '@lobehub/ui';
+import { Flexbox, SearchBar } from '@lobehub/ui';
 import { Segmented } from 'antd';
 import { useTheme } from 'antd-style';
 import { memo, useMemo, useState } from 'react';
-import { Flexbox } from 'react-layout-kit';
 
 import EmojiItem from './EmojiItem';
 import VirtuosoGridList from './VirtuosoGridList';
