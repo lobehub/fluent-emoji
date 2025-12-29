@@ -1,23 +1,23 @@
 import { Center, CopyButton, Flexbox } from '@lobehub/ui';
 import { Typography } from 'antd';
-import { createStyles } from 'antd-style';
-import { capitalize } from 'lodash-es';
+import { createStaticStyles } from 'antd-style';
+import { capitalize } from 'es-toolkit/string';
 import { ReactNode, memo, useRef } from 'react';
 
-const useStyles = createStyles(({ css, token }) => {
+const styles = createStaticStyles(({ css, cssVar }) => {
   return {
     card: css`
       position: relative;
 
       overflow: hidden;
 
-      border: 1px solid ${token.colorBorderSecondary};
-      border-radius: ${token.borderRadiusLG}px;
+      border: 1px solid ${cssVar.colorBorderSecondary};
+      border-radius: ${cssVar.borderRadiusLG};
 
-      background: ${token.colorBgContainer};
+      background: ${cssVar.colorBgContainer};
     `,
     row: css`
-      border-block-start: 1px solid ${token.colorFillSecondary};
+      border-block-start: 1px solid ${cssVar.colorFillSecondary};
     `,
     title: css`
       margin: 0;
@@ -37,7 +37,6 @@ interface IconItemProps {
 }
 
 const EmojiItem = memo<IconItemProps>(({ children, title, url, emoji }) => {
-  const { styles } = useStyles();
   const ref = useRef<HTMLDivElement>(null);
 
   return (

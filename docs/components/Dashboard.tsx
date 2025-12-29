@@ -2,14 +2,13 @@ import emojilib from '@lobehub/emojilib';
 import { FluentEmoji, FluentEmojiProps, getFluentEmojiCDN } from '@lobehub/fluent-emoji';
 import { Flexbox, SearchBar } from '@lobehub/ui';
 import { Segmented } from 'antd';
-import { useTheme } from 'antd-style';
+import { cssVar } from 'antd-style';
 import { memo, useMemo, useState } from 'react';
 
 import EmojiItem from './EmojiItem';
 import VirtuosoGridList from './VirtuosoGridList';
 
 const Dashboard = memo(() => {
-  const theme = useTheme();
   const [type, setType] = useState<FluentEmojiProps['type']>('3d');
   const [keyword, setKeyword] = useState<string>();
 
@@ -56,7 +55,7 @@ const Dashboard = memo(() => {
             },
           ]}
           style={{
-            border: `1px solid ${theme.colorBorder}`,
+            border: `1px solid ${cssVar.colorBorder}`,
           }}
         />
       </Flexbox>

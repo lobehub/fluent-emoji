@@ -1,13 +1,13 @@
 'use client';
 
-import { Center } from '@lobehub/ui';
+import { cx } from 'antd-style';
 import { ElementType, createElement, forwardRef, useMemo, useState } from 'react';
 import { type HTMLAttributes } from 'react';
 
 import { getFluentEmojiCDN } from '@/getFluentEmojiCDN';
 import { EmojiType } from '@/getFluentEmojiCDN/utils';
 
-import { useStyles } from './style';
+import { styles } from './style';
 
 const createContainer = (as: ElementType) =>
   forwardRef((props: any, ref) => createElement(as, { ...props, ref }));
@@ -37,7 +37,6 @@ const FluentEmoji = forwardRef<any, FluentEmojiProps>(
     ref,
   ) => {
     const [loadingFail, setLoadingFail] = useState(false);
-    const { cx, styles } = useStyles();
 
     const ImgContainer = useMemo(() => createContainer(as), [as]);
 
@@ -48,15 +47,21 @@ const FluentEmoji = forwardRef<any, FluentEmojiProps>(
 
     if (type === 'pure' || !emojiUrl || loadingFail)
       return (
-        <Center
+        <div
           className={cx(styles.container, className)}
-          flex={'none'}
-          height={size}
-          style={{ fontSize: size * 0.9, ...style }}
-          width={size}
+          style={{
+            alignItems: 'center',
+            display: 'inline-flex',
+            fontSize: size,
+            height: size,
+            justifyContent: 'center',
+            verticalAlign: 'middle',
+            width: size,
+            ...style,
+          }}
         >
           {emoji}
-        </Center>
+        </div>
       );
 
     return (
