@@ -73,9 +73,9 @@
   },
   "dependencies": {
     "@lobehub/emojilib": "^1.0.0",
-    "antd-style": "^4.0.0",
+    "antd-style": "^4.1.0",
     "emoji-regex": "^10.6.0",
-    "lodash-es": "^4.17.22",
+    "es-toolkit": "^1.43.0",
     "lucide-react": "^0.562.0",
     "url-join": "^5.0.0"
   },
@@ -85,7 +85,6 @@
     "@lobehub/lint": "^1.26.3",
     "@lobehub/ui": "^4.1.2",
     "@testing-library/react": "^16.3.1",
-    "@types/lodash-es": "^4.17.12",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "@vitest/coverage-v8": "~1.2.2",
@@ -116,8 +115,6 @@
     "vitest": "~1.2.2"
   },
   "peerDependencies": {
-    "@lobehub/ui": "^4.0.0",
-    "antd": "^6.1.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
