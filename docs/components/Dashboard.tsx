@@ -1,6 +1,6 @@
 import emojilib from '@lobehub/emojilib';
 import { FluentEmoji, FluentEmojiProps, getFluentEmojiCDN } from '@lobehub/fluent-emoji';
-import { Flexbox, SearchBar } from '@lobehub/ui';
+import { Flexbox, SearchBar, TooltipGroup } from '@lobehub/ui';
 import { Segmented } from 'antd';
 import { cssVar } from 'antd-style';
 import { memo, useMemo, useState } from 'react';
@@ -59,23 +59,25 @@ const Dashboard = memo(() => {
           }}
         />
       </Flexbox>
-      <VirtuosoGridList
-        data={list}
-        initialItemCount={24}
-        itemContent={(_, [emoji, name]) => (
-          <EmojiItem
-            emoji={emoji}
-            key={name}
-            title={name}
-            url={getFluentEmojiCDN(emoji, { type: type as any })}
-          >
-            <FluentEmoji emoji={emoji} key={name} size={56} type={type} />
-          </EmojiItem>
-        )}
-        style={{
-          minHeight: '1050px',
-        }}
-      />
+      <TooltipGroup>
+        <VirtuosoGridList
+          data={list}
+          initialItemCount={24}
+          itemContent={(_, [emoji, name]) => (
+            <EmojiItem
+              emoji={emoji}
+              key={name}
+              title={name}
+              url={getFluentEmojiCDN(emoji, { type: type as any })}
+            >
+              <FluentEmoji emoji={emoji} key={name} size={56} type={type} />
+            </EmojiItem>
+          )}
+          style={{
+            minHeight: '1050px',
+          }}
+        />
+      </TooltipGroup>
     </Flexbox>
   );
 });
