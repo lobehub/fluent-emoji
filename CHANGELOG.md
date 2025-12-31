@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 4.1.0](https://github.com/lobehub/fluent-emoji/compare/v4.0.1...v4.1.0)
+
+<sup>Released on **2025-12-31**</sup>
+
+#### ✨ Features
+
+- **misc**: Add TooltipGroup wrapper for emoji grid.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Add TooltipGroup wrapper for emoji grid ([0cfdc1f](https://github.com/lobehub/fluent-emoji/commit/0cfdc1f))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 4.0.1](https://github.com/lobehub/fluent-emoji/compare/v4.0.0...v4.0.1)
 
 <sup>Released on **2025-12-29**</sup>
