@@ -1,6 +1,6 @@
 import emojilib from '@lobehub/emojilib';
 import { FluentEmoji, FluentEmojiProps, getFluentEmojiCDN } from '@lobehub/fluent-emoji';
-import { Flexbox, SearchBar, TooltipGroup } from '@lobehub/ui';
+import { Empty, Flexbox, SearchBar, TooltipGroup } from '@lobehub/ui';
 import { Segmented } from 'antd';
 import { cssVar } from 'antd-style';
 import { memo, useMemo, useState } from 'react';
@@ -24,6 +24,9 @@ const Dashboard = memo(() => {
       <Flexbox align={'center'} gap={12} horizontal>
         <SearchBar
           defaultValue={keyword}
+          onChange={(e) => {
+            if (!e.target.value) setKeyword(undefined);
+          }}
           onSearch={(v) => setKeyword(v)}
           placeholder={'Search by emoji keywords...'}
           style={{ width: '100%' }}
@@ -59,25 +62,37 @@ const Dashboard = memo(() => {
           }}
         />
       </Flexbox>
-      <TooltipGroup>
-        <VirtuosoGridList
-          data={list}
-          initialItemCount={24}
-          itemContent={(_, [emoji, name]) => (
-            <EmojiItem
-              emoji={emoji}
-              key={name}
-              title={name}
-              url={getFluentEmojiCDN(emoji, { type: type as any })}
-            >
-              <FluentEmoji emoji={emoji} key={name} size={56} type={type} />
-            </EmojiItem>
-          )}
-          style={{
-            minHeight: '1050px',
-          }}
+      {list.length === 0 ? (
+        <Empty
+          description={`No emoji found for "${keyword}"`}
+          justify={'center'}
+          style={{ minHeight: '350px' }}
         />
-      </TooltipGroup>
+      ) : (
+        <TooltipGroup>
+          <VirtuosoGridList
+            data={list}
+            initialItemCount={24}
+            itemContent={(_, item) => {
+              if (!item) return null;
+              const [emoji, name] = item;
+              return (
+                <EmojiItem
+                  emoji={emoji}
+                  key={name}
+                  title={name}
+                  url={getFluentEmojiCDN(emoji, { type: type as any })}
+                >
+                  <FluentEmoji emoji={emoji} key={name} size={56} type={type} />
+                </EmojiItem>
+              );
+            }}
+            style={{
+              minHeight: '1050px',
+            }}
+          />
+        </TooltipGroup>
+      )}
     </Flexbox>
   );
 });
