@@ -14,6 +14,11 @@ const external = [
   ...Object.keys(pkg.peerDependencies ?? {}),
 ];
 
+/**
+ * `unbundle` must stay on: `'use client'` lives in `src/FluentEmoji/index.tsx`,
+ * and a bundled build would drop it, turning the component into a server module
+ * under the Next.js App Router.
+ */
 export default defineConfig({
   dts: true,
   entry: ['src/index.ts'],
