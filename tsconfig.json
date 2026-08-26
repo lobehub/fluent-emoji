@@ -20,5 +20,5 @@
       "@lobehub/fluent-emoji/*": ["src/*"]
     }
   },
-  "include": ["src", "docs", "tests", "scripts", ".dumirc.ts", ".fatherrc.ts"]
+  "include": ["src", "docs", "tests", "scripts", ".dumirc.ts", "tsdown.config.ts"]
 }
