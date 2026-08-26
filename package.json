@@ -17,14 +17,21 @@
   "license": "MIT",
   "author": "LobeHub <i@lobehub.com>",
   "sideEffects": false,
-  "main": "es/index.js",
-  "module": "es/index.js",
-  "types": "es/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./es/index.d.mts",
+      "import": "./es/index.mjs",
+      "default": "./es/index.mjs"
+    }
+  },
+  "main": "es/index.mjs",
+  "module": "es/index.mjs",
+  "types": "es/index.d.mts",
   "files": [
     "es"
   ],
   "scripts": {
-    "build": "father build",
+    "build": "tsdown",
     "build:static": "tsx ./scripts/groupAnim.ts",
     "ci": "npm run lint && npm run type-check",
     "clean": "rm -r es lib dist coverage .dumi/tmp .eslintcache node_modules/.cache",
@@ -32,7 +39,6 @@
     "docs:build": "dumi build",
     "docs:build-analyze": "ANALYZE=1 dumi build",
     "docs:dev": "dumi dev",
-    "doctor": "father doctor",
     "lint": "eslint \"{src,packages}/**/*.{js,jsx,ts,tsx}\" --fix",
     "lint:circular": "dpdm src/**/*.{ts,tsx}  --warning false  --tree false  --exit-code circular:1  -T true",
     "lint:md": "remark . --quiet --frail --output",
@@ -96,7 +102,6 @@
     "dumi": "^2.4.21",
     "dumi-theme-lobehub": "^4.0.1",
     "eslint": "^8.57.1",
-    "father": "^4.6.11",
     "glob": "^13.0.0",
     "husky": "^9.1.7",
     "jsdom": "^27.3.0",
@@ -111,6 +116,7 @@
     "semantic-release": "^21.1.2",
     "sharp": "^0.34.5",
     "stylelint": "^15.11.0",
+    "tsdown": "^0.22.14",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "vitest": "~1.2.2"
