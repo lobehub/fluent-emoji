@@ -9,10 +9,9 @@ const GridList = forwardRef<HTMLDivElement, GridProps>((props, ref) => (
 const VirtuosoGridList = memo<VirtuosoGridProps<any, any>>(
   ({ data, initialItemCount, ...rest }) => {
     const count = data && data?.length >= 8 ? 8 : data?.length;
-    const maxInitialItemCount =
-      data && data?.length && initialItemCount && initialItemCount > data?.length
-        ? data?.length
-        : initialItemCount;
+    const maxInitialItemCount = data
+      ? Math.min(initialItemCount ?? Infinity, data.length)
+      : initialItemCount;
     return (
       <VirtuosoGrid
         components={{ List: GridList }}
