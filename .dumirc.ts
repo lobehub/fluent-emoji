@@ -63,6 +63,7 @@ export default defineConfig({
     'process.env': process.env,
   },
   exportStatic: {},
+  extraBabelPlugins: ['@babel/plugin-syntax-import-attributes'],
   favicons: ['https://lobehub.com/favicon.ico'],
   jsMinifier: 'swc',
   locales: [{ id: 'en-US', name: 'English' }],

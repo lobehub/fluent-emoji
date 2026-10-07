@@ -85,6 +85,7 @@
     "url-join": "^5.0.0"
   },
   "devDependencies": {
+    "@babel/plugin-syntax-import-attributes": "^7.29.7",
     "@babel/runtime": "^7.28.4",
     "@commitlint/cli": "^19.8.1",
     "@lobehub/lint": "^1.26.3",
@@ -103,6 +104,7 @@
     "husky": "^9.1.7",
     "jsdom": "^27.3.0",
     "lint-staged": "^16.2.7",
+    "motion": "^13.0.0",
     "multi-semantic-release": "^3.1.0",
     "p-map": "^7.0.4",
     "react": "^19.2.3",
