@@ -1,6 +1,4 @@
-import { Center, CopyButton, Flexbox } from '@lobehub/ui';
-import { Typography } from 'antd';
-import { createStaticStyles } from 'antd-style';
+import { Center, CopyButton, Flexbox, Text, createStaticStyles } from '@lobehub/ui';
 import { capitalize } from 'es-toolkit/string';
 import { ReactNode, memo, useRef } from 'react';
 
@@ -54,9 +52,9 @@ const EmojiItem = memo<IconItemProps>(({ children, title, url, emoji }) => {
         paddingInline={12}
         width={'100%'}
       >
-        <Typography.Title className={styles.title} ellipsis={{ rows: 1 }} level={2}>
+        <Text className={styles.title} ellipsis={{ rows: 1 }}>
           {capitalize(title.replaceAll('-', ' '))}
-        </Typography.Title>
+        </Text>
       </Flexbox>
       <Flexbox align={'center'} className={styles.row} horizontal>
         <Flexbox flex={1} horizontal paddingInline={12}>

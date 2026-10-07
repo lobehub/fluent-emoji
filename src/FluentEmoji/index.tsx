@@ -1,13 +1,10 @@
 'use client';
 
-import { cx } from 'antd-style';
 import { ElementType, createElement, forwardRef, useMemo, useState } from 'react';
 import { type HTMLAttributes } from 'react';
 
 import { getFluentEmojiCDN } from '@/getFluentEmojiCDN';
 import { EmojiType } from '@/getFluentEmojiCDN/utils';
-
-import { styles } from './style';
 
 const createContainer = (as: ElementType) =>
   forwardRef((props: any, ref) => createElement(as, { ...props, ref }));
@@ -48,13 +45,16 @@ const FluentEmoji = forwardRef<any, FluentEmojiProps>(
     if (type === 'pure' || !emojiUrl || loadingFail)
       return (
         <div
-          className={cx(styles.container, className)}
+          className={className}
           style={{
             alignItems: 'center',
             display: 'inline-flex',
             fontSize: size,
             height: size,
             justifyContent: 'center',
+            lineHeight: 1,
+            position: 'relative',
+            textAlign: 'center',
             verticalAlign: 'middle',
             width: size,
             ...style,

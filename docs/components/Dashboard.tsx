@@ -1,8 +1,6 @@
 import emojilib from '@lobehub/emojilib';
 import { FluentEmoji, FluentEmojiProps, getFluentEmojiCDN } from '@lobehub/fluent-emoji';
-import { Flexbox, SearchBar, TooltipGroup } from '@lobehub/ui';
-import { Segmented } from 'antd';
-import { cssVar } from 'antd-style';
+import { Flexbox, SearchBar, Segmented, TooltipGroup, cssVar } from '@lobehub/ui';
 import { memo, useMemo, useState } from 'react';
 
 import EmojiItem from './EmojiItem';
