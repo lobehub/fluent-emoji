@@ -2,6 +2,41 @@
 
 # Changelog
 
+## [Version 5.0.0-beta.1](https://github.com/lobehub/fluent-emoji/compare/v4.1.1...v5.0.0-beta.1)
+
+<sup>Released on **2026-10-10**</sup>
+
+#### ♻ Code Refactoring
+
+- **misc**: Drop antd-style for the next @lobehub/ui major.
+
+#### 🐛 Bug Fixes
+
+- **docs**: Enable import attributes syntax in dumi babel and add motion.
+- **scripts**: Copy anim files without Buffer typing.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Code refactoring
+
+- **misc**: Drop antd-style for the next @lobehub/ui major ([8903a18](https://github.com/lobehub/fluent-emoji/commit/8903a18))
+
+#### What's fixed
+
+- **docs**: Enable import attributes syntax in dumi babel and add motion ([cbb71e8](https://github.com/lobehub/fluent-emoji/commit/cbb71e8))
+- **scripts**: Copy anim files without Buffer typing ([ad41eee](https://github.com/lobehub/fluent-emoji/commit/ad41eee))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 4.1.1](https://github.com/lobehub/fluent-emoji/compare/v4.1.0...v4.1.1)
 
 <sup>Released on **2026-08-26**</sup>
