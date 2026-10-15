@@ -1,3 +1,6 @@
 packages:
   - "*"
   - 'packages/**'
+minimumReleaseAgeExclude:
+  - '@lobehub/docs-kit@5.27.7-beta.2 || 6.0.0'
+  - '@lobehub/ui@6.0.0'
