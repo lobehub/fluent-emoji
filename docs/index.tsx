@@ -1,6 +1,7 @@
 import { Center, Flexbox, Snippet } from '@lobehub/ui';
-import { Features, FeaturesProps } from '@lobehub/ui/awesome';
+import { Features, FeaturesProps, Hero } from '@lobehub/ui/awesome';
 import { Expand, GitPullRequest, Trees } from 'lucide-react';
+import { Link } from 'react-router';
 
 import Dashboard from './components/Dashboard';
 
@@ -27,7 +28,25 @@ const items: FeaturesProps['items'] = [
 
 export default () => {
   return (
-    <Flexbox gap={48}>
+    <Flexbox gap={64} paddingBlock={64}>
+      <Hero
+        Link={Link}
+        actions={[
+          {
+            github: true,
+            link: 'https://github.com/lobehub/fluent-emoji',
+            openExternal: true,
+            text: 'GitHub',
+          },
+          {
+            link: '/components/fluent-emoji',
+            text: 'Get Started',
+            type: 'primary',
+          },
+        ]}
+        description="Fluent Emoji are a collection of familiar, friendly, and modern emoji from Microsoft"
+        title="Fluent <b>Emoji</b>"
+      />
       <Center>
         <h2 style={{ fontSize: 20 }}>To install Fluent Emoji, run the following command:</h2>
         <Snippet language={'bash'}>{'$ bun add @lobehub/fluent-emoji'}</Snippet>
