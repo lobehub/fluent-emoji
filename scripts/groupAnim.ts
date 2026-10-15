@@ -1,5 +1,5 @@
 import { globSync } from 'glob';
-import { readFileSync, unlinkSync, writeFileSync } from 'node:fs';
+import { copyFileSync, unlinkSync } from 'node:fs';
 import { resolve } from 'node:path';
 import pMap from 'p-map';
 
@@ -40,11 +40,10 @@ const run = async () => {
     emoji3D,
     async (emoji) => {
       const filepath = fixWinPath(emoji);
-      const file = readFileSync(filepath);
       const filename = filepath.split('/').pop();
       const group = getEmojiGroup(filename as string);
       const output = resolve(root, `packages/${group}/assets/${filename}`);
-      writeFileSync(output, file);
+      copyFileSync(filepath, output);
     },
     { concurrency: 10 },
   );

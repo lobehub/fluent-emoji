@@ -13,12 +13,8 @@ jest*
 _test_
 __test__
 
-# umi
-.umi
-.umi-production
-.umi-test
-.dumi/tmp*
-!.dumirc.ts
+# docs
+.react-router
 
 # production
 dist

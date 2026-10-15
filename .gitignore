@@ -33,11 +33,8 @@ test-output
 packages/assets-favicons/assets/faviconData.json
 webfonts
 
-# umi
-.umi
-.umi-production
-.umi-test
-.dumi/tmp*
+# docs
+.react-router
 
 # husky
 .husky/prepare-commit-msg

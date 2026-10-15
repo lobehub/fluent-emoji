@@ -4,9 +4,8 @@ import {
   getEmoji,
   getEmojiNameByCharacter,
 } from '@lobehub/fluent-emoji';
-import { Flexbox } from '@lobehub/ui';
+import { Button, Flexbox } from '@lobehub/ui';
 import { StoryBook, useControls, useCreateStore } from '@lobehub/ui/storybook';
-import { Button } from 'antd';
 
 export default () => {
   const store = useCreateStore();
