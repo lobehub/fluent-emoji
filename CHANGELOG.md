@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 5.0.0](https://github.com/lobehub/fluent-emoji/compare/v4.1.1...v5.0.0)
+
+<sup>Released on **2026-10-15**</sup>
+
+#### ✨ Features
+
+- **misc**: Adopt lobe-ui 6 and drop antd \[force major].
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Adopt lobe-ui 6 and drop antd \[force major], closes [#13](https://github.com/lobehub/fluent-emoji/issues/13) ([7284964](https://github.com/lobehub/fluent-emoji/commit/7284964))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 4.1.1](https://github.com/lobehub/fluent-emoji/compare/v4.1.0...v4.1.1)
 
 <sup>Released on **2026-08-26**</sup>
