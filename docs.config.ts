@@ -36,7 +36,8 @@ export default defineDocsConfig({
     },
     metadata: {
       openGraph: {
-        image: 'https://github.com/user-attachments/assets/b2b35675-b6dd-43d2-aea1-8139897dbfec',
+        image:
+          'https://repository-images.githubusercontent.com/804759710/6a5e449c-48b0-4d56-8dcb-6c94b2a3abaf',
       },
     },
     navItems: [
