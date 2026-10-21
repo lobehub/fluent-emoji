@@ -1,42 +1,45 @@
 <div align="center"><a name="readme-top"></a>
 
-<img height="160" src="https://raw.githubusercontent.com/lobehub/lobe-assets/master/packages/assets-logo/assets/logo-3d.webp">
+<img height="120" src="https://raw.githubusercontent.com/lobehub/lobe-assets/master/packages/assets-logo/assets/logo-3d.webp">
 
 <h1>@lobehub/fluent-emoji-anim-2</h1>
 
-Fluent Emoji are a collection of familiar, friendly, and modern emoji from Microsoft.
+Anim (part 2 of 4) style assets (animated WebP) for [`@lobehub/fluent-emoji`][npm-main-link].
 
 [![][npm-release-shield]][npm-release-link]
-[![][github-releasedate-shield]][github-releasedate-link]<br/>
-[![][github-contributors-shield]][github-contributors-link]
-[![][github-forks-shield]][github-forks-link]
-[![][github-stars-shield]][github-stars-link]
-[![][github-issues-shield]][github-issues-link]
-[![][github-license-shield]][github-license-link]
 
-[Changelog](./CHANGELOG.md) · [Report Bug][github-issues-link] · [Request Feature][github-issues-link]
-
-![](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+[Fluent Emoji][repo-link] · [Docs][docs-link] · [Changelog](./CHANGELOG.md)
 
 </div>
 
+This package only contains emoji image files, used when `type='anim'` is set on `FluentEmoji`. They are loaded from a CDN at runtime, so you usually **don't need to install it**: install `@lobehub/fluent-emoji` instead.
+
+The animated set is split across `@lobehub/fluent-emoji-anim-1` … `-anim-4` by code point; `FluentEmoji` and `getFluentEmojiCDN` pick the right package automatically.
+
+```tsx
+import { FluentEmoji } from '@lobehub/fluent-emoji';
+
+export default () => <FluentEmoji emoji={'😀'} type={'anim'} />;
+```
+
+Files are named by the emoji's code points (lowercase hex joined by `-`), for example:
+
+```bash
+https://registry.npmmirror.com/@lobehub/fluent-emoji-anim-2/latest/files/assets/1f600.webp
+https://unpkg.com/@lobehub/fluent-emoji-anim-2@latest/assets/1f600.webp
+```
+
+---
+
 #### 📝 License
 
-Copyright © 2023 [LobeHub][profile-url]. <br />
-This project is [MIT](./LICENSE) licensed.
+Copyright © 2026 [LobeHub][profile-link]. <br />
+This project is [MIT][license-link] licensed.
 
-[github-contributors-link]: https://github.com/lobehub/fluent-emoji/graphs/contributors
-[github-contributors-shield]: https://img.shields.io/github/contributors/lobehub/fluent-emoji?color=c4f042&labelColor=black&style=flat-square
-[github-forks-link]: https://github.com/lobehub/fluent-emoji/network/members
-[github-forks-shield]: https://img.shields.io/github/forks/lobehub/fluent-emoji?color=8ae8ff&labelColor=black&style=flat-square
-[github-issues-link]: https://github.com/lobehub/fluent-emoji/issues
-[github-issues-shield]: https://img.shields.io/github/issues/lobehub/fluent-emoji?color=ff80eb&labelColor=black&style=flat-square
-[github-license-link]: https://github.com/lobehub/fluent-emoji/blob/master/LICENSE
-[github-license-shield]: https://img.shields.io/github/license/lobehub/fluent-emoji?color=white&labelColor=black&style=flat-square
-[github-releasedate-link]: https://github.com/lobehub/fluent-emoji/releases
-[github-releasedate-shield]: https://img.shields.io/github/release-date/lobehub/fluent-emoji?labelColor=black&style=flat-square
-[github-stars-link]: https://github.com/lobehub/fluent-emoji/network/stargazers
-[github-stars-shield]: https://img.shields.io/github/stars/lobehub/fluent-emoji?color=ffcb47&labelColor=black&style=flat-square
+[docs-link]: https://fluent-emoji.lobehub.com
+[license-link]: https://github.com/lobehub/fluent-emoji/blob/master/LICENSE
+[npm-main-link]: https://www.npmjs.com/package/@lobehub/fluent-emoji
 [npm-release-link]: https://www.npmjs.com/package/@lobehub/fluent-emoji-anim-2
 [npm-release-shield]: https://img.shields.io/npm/v/@lobehub/fluent-emoji-anim-2?color=369eff&labelColor=black&logo=npm&logoColor=white&style=flat-square
-[profile-url]: https://github.com/lobehub
+[profile-link]: https://github.com/lobehub
+[repo-link]: https://github.com/lobehub/fluent-emoji

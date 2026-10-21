@@ -10,11 +10,33 @@ const createContainer = (as: ElementType) =>
   forwardRef((props: any, ref) => createElement(as, { ...props, ref }));
 
 export interface FluentEmojiProps extends HTMLAttributes<HTMLDivElement> {
+  /**
+   * Element or component used to render the image, e.g. `next/image`.
+   * @default 'img'
+   */
   as?: ElementType;
+  /**
+   * CDN the image is loaded from: `aliyun` (registry.npmmirror.com) or `unpkg`.
+   * @default 'aliyun'
+   */
   cdn?: 'aliyun' | 'unpkg';
+  /**
+   * The emoji character to render.
+   */
   emoji: string;
+  /**
+   * Width and height in pixels.
+   * @default 40
+   */
   size?: number;
+  /**
+   * Emoji style. `pure` renders the native emoji character instead of an image.
+   * @default '3d'
+   */
   type?: EmojiType | 'pure';
+  /**
+   * Passed through to the `as` component (useful with `next/image`).
+   */
   unoptimized?: boolean;
 }
 

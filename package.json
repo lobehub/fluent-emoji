@@ -1,10 +1,12 @@
 {
   "name": "@lobehub/fluent-emoji",
   "version": "5.0.0",
-  "description": "Fluent Emoji are a collection of familiar, friendly, and modern emoji from Microsoft",
+  "description": "Microsoft Fluent Emoji for React, one component in five styles (anim, 3d, modern, flat, mono) loaded from a CDN",
   "keywords": [
     "emoji",
-    "fluent-emoji"
+    "fluent-emoji",
+    "fluentui-emoji",
+    "react"
   ],
   "homepage": "https://github.com/lobehub/fluent-emoji",
   "bugs": {
@@ -42,7 +44,7 @@
     "lint": "eslint \"{src,packages}/**/*.{js,jsx,ts,tsx}\" --fix",
     "lint:circular": "dpdm src/**/*.{ts,tsx}  --warning false  --tree false  --exit-code circular:1  -T true",
     "lint:md": "remark . --quiet --frail --output",
-    "lint:style": "stylelint \"{src,tests}/**/*.{js,jsx,ts,tsx}\" --fix",
+    "lint:style": "stylelint \"{src,docs}/**/*.{js,jsx,ts,tsx}\" --fix",
     "prepack": "clean-package",
     "postpack": "clean-package restore",
     "prepare": "husky && npm run setup",
@@ -52,7 +54,7 @@
     "release:static": "multi-semantic-release",
     "setup": "lobedocs typegen",
     "start": "npm run dev",
-    "sync:cnpm": "cnpm sync @lobehub/fluent-emoji-mono @lobehub/fluent-emoji-flat @lobehub/fluent-emoji-modern @lobehub/fluent-emoji-anim-1 @lobehub/fluent-emoji-anim-2 @lobehub/fluent-emoji-anim-3 @lobehub/fluent-emoji-anim-4",
+    "sync:cnpm": "cnpm sync @lobehub/fluent-emoji-3d @lobehub/fluent-emoji-mono @lobehub/fluent-emoji-flat @lobehub/fluent-emoji-modern @lobehub/fluent-emoji-anim-1 @lobehub/fluent-emoji-anim-2 @lobehub/fluent-emoji-anim-3 @lobehub/fluent-emoji-anim-4",
     "test": "vitest --passWithNoTests",
     "test:coverage": "vitest run --coverage  --passWithNoTests",
     "test:update": "vitest -u",
@@ -60,7 +62,7 @@
   },
   "lint-staged": {
     "*.md": [
-      "remark --quiet --output --",
+      "remark --quiet --silently-ignore --output --",
       "prettier --write --no-error-on-unmatched-pattern"
     ],
     "*.json": [
@@ -80,8 +82,6 @@
   "dependencies": {
     "@lobehub/emojilib": "^1.0.0",
     "emoji-regex": "^10.6.0",
-    "es-toolkit": "^1.43.0",
-    "lucide-react": "^0.562.0",
     "url-join": "^5.0.0"
   },
   "devDependencies": {
@@ -99,11 +99,13 @@
     "clean-package": "^2.2.0",
     "commitlint": "^19.8.1",
     "dpdm": "^3.14.0",
+    "es-toolkit": "^1.43.0",
     "eslint": "^8.57.1",
     "glob": "^13.0.0",
     "husky": "^9.1.7",
     "jsdom": "^27.3.0",
     "lint-staged": "^16.2.7",
+    "lucide-react": "^0.562.0",
     "motion": "^13.0.0",
     "multi-semantic-release": "^3.1.0",
     "p-map": "^7.0.4",
@@ -114,7 +116,6 @@
     "remark": "^15.0.1",
     "remark-cli": "^12.0.1",
     "semantic-release": "^21.1.2",
-    "sharp": "^0.34.5",
     "stylelint": "^15.11.0",
     "tsdown": "^0.22.14",
     "tsx": "^4.21.0",

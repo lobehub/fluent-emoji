@@ -1,6 +1,6 @@
 ---
 title: FluentEmoji
-description: The FluentEmoji component is used to display an emoji with the Fluent design style. It supports different types of styles (modern, flat, high-contrast) and sizes. It also provides a loading spinner when the image is being fetched from the server, and a fallback text emoji when the image fails to load. The component is customizable with className and style props, and can receive additional props to be passed down to the underlying div element.
+description: Render an emoji character as a Fluent Emoji image in one of five styles (anim, 3d, modern, flat, mono), loaded from a CDN, with the native emoji as fallback.
 category: Components
 ---
 
@@ -10,6 +10,36 @@ import DemoIndex from './demos/index.tsx?demo';
 
 <Demo of={DemoIndex} layout="bare" />
 
+## Styles
+
+Set `type` to choose the style. The image is loaded lazily from the CDN chosen by `cdn` (`aliyun`, i.e. npmmirror, by default, or `unpkg`).
+
+| `type`   | Asset                                  |
+| -------- | -------------------------------------- |
+| `anim`   | Animated WebP                          |
+| `3d`     | WebP (default)                         |
+| `modern` | SVG                                    |
+| `flat`   | SVG                                    |
+| `mono`   | Monochrome SVG                         |
+| `pure`   | No image, renders the native character |
+
+## Fallback
+
+With `type="pure"`, or when the image fails to load, the component renders the emoji character itself in a `size`-sized box, so a missing asset never shows a broken image.
+
+## Custom image component
+
+The image is rendered with `as` (default `img`) and receives `src`, `alt`, `width`, `height`, `loading="lazy"` and `unoptimized`, so it can be swapped for `next/image`:
+
+```tsx
+import { FluentEmoji } from '@lobehub/fluent-emoji';
+import Image from 'next/image';
+
+export default () => <FluentEmoji as={Image} emoji={'🤯'} size={64} unoptimized />;
+```
+
 ## APIs
 
 <Api name="FluentEmoji" />
+
+Only `className`, `style` and `onError` are forwarded; other HTML attributes are ignored.

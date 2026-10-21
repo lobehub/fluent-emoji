@@ -6,8 +6,10 @@
 
 <h1>Fluent Emoji</h1>
 
-A collection of familiar, friendly, and modern emoji from Microsoft. See them all on one page at [fluent-emoji.lobehub.com](https://fluent-emoji.lobehub.com).<br/>
-Contributions, corrections & requests can be made on GitHub.
+<h3>Expressive Emoji for React, Loaded on Demand</h3>
+
+A React component and helpers that render Microsoft Fluent Emoji in five styles (animated, 3D, modern, flat and mono), with images loaded from a CDN.<br/>
+For React developers who want the same emoji on every platform without bundling image assets; browse them all at [fluent-emoji.lobehub.com](https://fluent-emoji.lobehub.com).
 
 [![][npm-release-shield]][npm-release-link]
 [![][github-releasedate-shield]][github-releasedate-link]
@@ -25,11 +27,16 @@ Contributions, corrections & requests can be made on GitHub.
 
 </div>
 
-## ✨ Features
+## 💡 Why Fluent Emoji?
 
-- 🚀 **Lightweight & Scalable**: Emojis are designed to be lightweight, utilizing highly optimized scalable vector graphics (SVG) / WebP for the best performance and quality.
-- 🌳 **Tree Shakable**: The collection is tree-shakable, ensuring that you only import the emojis that you use by cdn, which helps in reducing the overall bundle size of your project.
-- 👥 **Active Community**: Fluent Emoji boasts an active community of designers and developers. Engage with us on platforms like GitHub and Discord to contribute or get support.
+Drop Microsoft's [Fluent Emoji](https://github.com/microsoft/fluentui-emoji) into any React app with a single component.
+
+- **Five looks, one prop**: switch between animated, 3D, modern, flat and monochrome emoji
+- **Keeps your bundle small**: images are fetched from a CDN only when they are shown
+- **Never shows a broken image**: falls back to the native emoji if an image can't load
+- **Works with React 19 and Next.js**: including custom image components such as `next/image`
+- **Handy emoji helpers**: find the emoji in a string, get its name, or get an image URL
+- **AI-native**: agent-ready [`skills.md`][skills-link] and [`llms.txt`][llms-link] so AI assistants use it correctly
 
 <div align="right">
 
@@ -37,29 +44,61 @@ Contributions, corrections & requests can be made on GitHub.
 
 </div>
 
-## 📦 Installation
-
-> \[!IMPORTANT]\
-> This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c).
-
-To install `@lobehub/fluent-emoji`, run the following command:
-
-[![][bun-shield]][bun-link]
+## 🚀 Getting Started
 
 ```bash
 $ bun add @lobehub/fluent-emoji
 ```
 
-### Compile with Next.js
+Requires `react` and `react-dom` 19 (peer dependencies). The package is ESM only.
 
-> \[!NOTE]\
-> By work correct with Next.js SSR, add `transpilePackages: ['@lobehub/fluent-emoji']` to `next.config.js`. For example:
+```tsx
+import { FluentEmoji } from '@lobehub/fluent-emoji';
 
-```js
-const nextConfig = {
-  transpilePackages: ['@lobehub/fluent-emoji'],
-};
+export default () => <FluentEmoji emoji={'🤯'} size={64} type={'anim'} />;
 ```
+
+Need just the image URL? `getFluentEmojiCDN('🤯', { type: '3d' })` returns it.
+
+Using Next.js? Add `transpilePackages: ['@lobehub/fluent-emoji']` to `next.config.js`.
+
+See the [documentation](https://fluent-emoji.lobehub.com) for all props, styles and helpers ([FluentEmoji](https://fluent-emoji.lobehub.com/components/fluent-emoji) · [getFluentEmojiCDN](https://fluent-emoji.lobehub.com/components/get-fluent-emoji-cdn) · [getEmojiByCharacter](https://fluent-emoji.lobehub.com/components/get-emoji-by-character)).
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
+## 🤖 AI-Powered Development
+
+Fluent Emoji is ready for AI-assisted development. The docs site generates agent-friendly references for every component and helper.
+
+| Tool             | What it does                                                                              |
+| ---------------- | ----------------------------------------------------------------------------------------- |
+| **Agent Skills** | [skills.md][skills-link]: give this URL to your agent in Cursor, Claude Code, Codex, etc. |
+| **llms.txt**     | [llms.txt][llms-link]: an index of every docs page, so LLMs can find the right reference  |
+
+Copy this prompt into your agent:
+
+```text
+Read https://fluent-emoji.lobehub.com/skills.md and use @lobehub/fluent-emoji to render emoji in my React app.
+```
+
+Works with **Cursor**, **Claude Code**, **Windsurf**, **GitHub Copilot**, and any other tool that supports `llms.txt`.
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
+## 🧩 Packages
+
+| Package                                                                        | Purpose                                                    |
+| ------------------------------------------------------------------------------ | ---------------------------------------------------------- |
+| [`@lobehub/fluent-emoji`](https://www.npmjs.com/package/@lobehub/fluent-emoji) | The React component and helpers (the only one you install) |
+| `@lobehub/fluent-emoji-{3d,anim-1…4,modern,flat,mono}`                         | Emoji image assets, served from a CDN automatically        |
 
 <div align="right">
 
@@ -106,24 +145,13 @@ Contributions of all types are more than welcome, if you are interested in contr
 
 ## 🔗 Links
 
-### More Products
-
-- **[🤯 Lobe Chat](https://github.com/lobehub/lobe-chat)** - An open-source, extensible (Function Calling), high-performance chatbot framework. It supports one-click free deployment of your private ChatGPT/LLM web application.
-- **[🅰️ Lobe Theme](https://github.com/lobehub/sd-webui-lobe-theme)** - The modern theme for stable diffusion webui, exquisite interface design, highly customizable UI, and efficiency boosting features.
-- **[🧸 Lobe Vidol](https://github.com/lobehub/lobe-vidol)** - Experience the magic of virtual idol creation with Lobe Vidol, enjoy the elegance of our Exquisite UI Design, dance along using MMD Dance Support, and engage in Smooth Conversations.
-
-### Design Resources
-
-- **[🍭 Lobe UI](https://ui.lobehub.com)** - An open-source UI component library for building AIGC web apps.
-- **[🥨 Lobe Icons](https://lobehub.com/icons)** - Popular AI / LLM Model Brand SVG Logo and Icon Collection.
-- **[📊 Lobe Charts](https://charts.lobehub.com)** - React modern charts components built on recharts
-
-### Development Resources
-
-- **[🎤 Lobe TTS](https://tts.lobehub.com)** - A high-quality & reliable TTS/STT library for Server and Browser
-- **[🌏 Lobe i18n](https://github.com/lobehub/lobe-cli-toolbox/blob/master/packages/lobe-i18n)** - Automation ai tool for the i18n (internationalization) translation process.
-
-[More Resources](https://lobehub.com/resources)
+- **[🤯 Lobe UI](https://github.com/lobehub/lobe-ui)** - React component library for AI applications
+- **[🌈 Lobe Icons](https://github.com/lobehub/lobe-icons)** - AI / LLM brand logo and icon collection
+- **[📊 Lobe Charts](https://github.com/lobehub/lobe-charts)** - React chart components library
+- **[✒️ Lobe Editor](https://github.com/lobehub/lobe-editor)** - Lexical-based rich text editor for React, with Markdown, plugins and a chat composer
+- **[🗣️ Lobe TTS](https://github.com/lobehub/lobe-tts)** - TTS / STT speech library
+- **[📐 Lobe Lint](https://github.com/lobehub/lobe-lint)** - ESLint, Prettier, Stylelint, Commitlint and more lint configs
+- **[😊 Fluent Emoji](https://github.com/lobehub/fluent-emoji)** - Fluent Emoji asset library
 
 <div align="right">
 
@@ -161,8 +189,10 @@ This project is [MIT](./LICENSE) licensed.
 [github-releasedate-shield]: https://img.shields.io/github/release-date/lobehub/fluent-emoji?labelColor=black&style=flat-square
 [github-stars-link]: https://github.com/lobehub/fluent-emoji/network/stargazers
 [github-stars-shield]: https://img.shields.io/github/stars/lobehub/fluent-emoji?color=ffcb47&labelColor=black&style=flat-square
+[llms-link]: https://fluent-emoji.lobehub.com/llms.txt
 [npm-release-link]: https://www.npmjs.com/package/@lobehub/fluent-emoji
 [npm-release-shield]: https://img.shields.io/npm/v/@lobehub/fluent-emoji?color=369eff&labelColor=black&logo=npm&logoColor=white&style=flat-square
 [pr-welcome-link]: https://github.com/lobehub/fluent-emoji/pulls
 [pr-welcome-shield]: https://img.shields.io/badge/%F0%9F%A4%AF%20PR%20WELCOME-%E2%86%92-ffcb47?labelColor=black&style=for-the-badge
 [profile-link]: https://github.com/lobehub
+[skills-link]: https://fluent-emoji.lobehub.com/skills.md

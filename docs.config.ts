@@ -7,11 +7,11 @@ export default defineDocsConfig({
   },
   atomDirs: [{ dir: 'src', subType: 'components', type: 'component' }],
   description:
-    'Fluent Emoji are a collection of familiar, friendly, and modern emoji from Microsoft',
+    'Microsoft Fluent Emoji for React, one component in five styles (anim, 3d, modern, flat, mono) loaded from a CDN.',
   favicons: {
     icon: 'https://lobehub.com/favicon.ico',
   },
-  homePage: './docs/index.tsx',
+  homePage: './docs/home/home.tsx',
   navSections: {},
   siteUrl: 'https://fluent-emoji.lobehub.com',
   themeConfig: {

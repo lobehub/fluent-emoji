@@ -10,11 +10,22 @@ import DemoIndex from './demos/index.tsx?demo';
 
 <Demo of={DemoIndex} />
 
+## Usage
+
+```ts
+import { getFluentEmojiCDN } from '@lobehub/fluent-emoji';
+
+getFluentEmojiCDN('🤯'); // 3d style from npmmirror
+getFluentEmojiCDN('🤯', { cdn: 'unpkg', type: 'flat' });
+```
+
+When `config` is omitted the URL points to the `3d` style on the `aliyun` CDN. When you pass `config`, `type` is required.
+
 ## Options
 
 ```ts
 export interface FluentEmojiCdnConfig {
-  cdn?: 'aliyun' | 'unpkg';
-  type?: 'anim' | 'flat' | 'modern' | 'mono' | '3d';
+  cdn?: 'aliyun' | 'unpkg'; // default 'aliyun' (registry.npmmirror.com)
+  type: 'anim' | 'flat' | 'modern' | 'mono' | '3d';
 }
 ```

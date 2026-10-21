@@ -56,3 +56,6 @@ Dockerfile*
 
 # misc
 # add other ignore file below
+
+# agent skills (synced from other LobeHub repos, keep verbatim)
+.agents

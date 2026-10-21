@@ -1,10 +1,12 @@
 ---
 title: getEmojiByCharacter
-description: Look up the Fluent Emoji name of an emoji character, or extract the first emoji from a string.
+description: Extract the first emoji from a string, or look up an emoji's name from @lobehub/emojilib.
 category: Utils
 ---
 
 ## getEmojiNameByCharacter
+
+Returns the name of the first emoji in the input (from `@lobehub/emojilib`), or `undefined` if there is no emoji or no name for it.
 
 ```tsx
 import { getEmojiNameByCharacter } from '@lobehub/fluent-emoji';
@@ -17,6 +19,8 @@ export default () => {
 ```
 
 ## getEmoji
+
+Returns the first emoji found in a string, or `undefined` if there is none.
 
 ```tsx
 import { getEmoji } from '@lobehub/fluent-emoji';

@@ -1,42 +1,27 @@
 <div align="center"><a name="readme-top"></a>
 
-<img height="160" src="https://raw.githubusercontent.com/lobehub/lobe-assets/master/packages/assets-logo/assets/logo-3d.webp">
+<img height="120" src="https://raw.githubusercontent.com/lobehub/lobe-assets/master/packages/assets-logo/assets/logo-3d.webp">
 
 <h1>@lobehub/fluent-emoji-anim</h1>
 
-Fluent Emoji are a collection of familiar, friendly, and modern emoji from Microsoft.
+Private source folder for the animated (`anim`) Fluent Emoji assets. **Not published to npm.**
 
-[![][npm-release-shield]][npm-release-link]
-[![][github-releasedate-shield]][github-releasedate-link]<br/>
-[![][github-contributors-shield]][github-contributors-link]
-[![][github-forks-shield]][github-forks-link]
-[![][github-stars-shield]][github-stars-link]
-[![][github-issues-shield]][github-issues-link]
-[![][github-license-shield]][github-license-link]
-
-[Changelog](./CHANGELOG.md) · [Report Bug][github-issues-link] · [Request Feature][github-issues-link]
-
-![](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+[Fluent Emoji][repo-link] · [Docs][docs-link]
 
 </div>
 
+`packages/anim/assets` holds the full animated WebP set. `bun run build:static` (`scripts/groupAnim.ts`) splits it by code point into the published packages `@lobehub/fluent-emoji-anim-1` … `-anim-4` (`packages/anim1` – `packages/anim4`), which `FluentEmoji` loads from a CDN when `type='anim'`.
+
+The split must stay in sync with `emojiAnimPkg` in [`src/getFluentEmojiCDN/utils.ts`](../../src/getFluentEmojiCDN/utils.ts).
+
+---
+
 #### 📝 License
 
-Copyright © 2023 [LobeHub][profile-url]. <br />
-This project is [MIT](./LICENSE) licensed.
+Copyright © 2026 [LobeHub][profile-link]. <br />
+This project is [MIT][license-link] licensed.
 
-[github-contributors-link]: https://github.com/lobehub/fluent-emoji/graphs/contributors
-[github-contributors-shield]: https://img.shields.io/github/contributors/lobehub/fluent-emoji?color=c4f042&labelColor=black&style=flat-square
-[github-forks-link]: https://github.com/lobehub/fluent-emoji/network/members
-[github-forks-shield]: https://img.shields.io/github/forks/lobehub/fluent-emoji?color=8ae8ff&labelColor=black&style=flat-square
-[github-issues-link]: https://github.com/lobehub/fluent-emoji/issues
-[github-issues-shield]: https://img.shields.io/github/issues/lobehub/fluent-emoji?color=ff80eb&labelColor=black&style=flat-square
-[github-license-link]: https://github.com/lobehub/fluent-emoji/blob/master/LICENSE
-[github-license-shield]: https://img.shields.io/github/license/lobehub/fluent-emoji?color=white&labelColor=black&style=flat-square
-[github-releasedate-link]: https://github.com/lobehub/fluent-emoji/releases
-[github-releasedate-shield]: https://img.shields.io/github/release-date/lobehub/fluent-emoji?labelColor=black&style=flat-square
-[github-stars-link]: https://github.com/lobehub/fluent-emoji/network/stargazers
-[github-stars-shield]: https://img.shields.io/github/stars/lobehub/fluent-emoji?color=ffcb47&labelColor=black&style=flat-square
-[npm-release-link]: https://www.npmjs.com/package/@lobehub/fluent-emoji-anim
-[npm-release-shield]: https://img.shields.io/npm/v/@lobehub/fluent-emoji-anim?color=369eff&labelColor=black&logo=npm&logoColor=white&style=flat-square
-[profile-url]: https://github.com/lobehub
+[docs-link]: https://fluent-emoji.lobehub.com
+[license-link]: https://github.com/lobehub/fluent-emoji/blob/master/LICENSE
+[profile-link]: https://github.com/lobehub
+[repo-link]: https://github.com/lobehub/fluent-emoji
