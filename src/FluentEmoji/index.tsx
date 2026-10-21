@@ -1,21 +1,9 @@
 'use client';
 
-import {
-  createElement,
-  type ElementType,
-  type HTMLAttributes,
-  type Ref,
-  useMemo,
-  useState,
-} from 'react';
+import { type ElementType, type HTMLAttributes, type Ref, useMemo, useState } from 'react';
 
 import { getFluentEmojiCDN } from '@/getFluentEmojiCDN';
 import type { EmojiType } from '@/getFluentEmojiCDN/utils';
-
-const createContainer =
-  (as: ElementType) =>
-  ({ ref, ...props }: { [key: string]: any; ref?: Ref<any> }) =>
-    createElement(as, { ...props, ref });
 
 export interface FluentEmojiProps extends HTMLAttributes<HTMLDivElement> {
   /**
@@ -66,7 +54,8 @@ const FluentEmoji = ({
 }: FluentEmojiProps) => {
   const [loadingFail, setLoadingFail] = useState(false);
 
-  const ImgContainer = useMemo(() => createContainer(as), [as]);
+  // React 19 passes `ref` as a regular prop, so `as` can be rendered directly.
+  const ImgContainer = as;
 
   const emojiUrl = useMemo(() => {
     if (type === 'pure') return null;
