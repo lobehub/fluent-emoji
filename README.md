@@ -1,8 +1,7 @@
 <div align="center"><a name="readme-top"></a>
 
-<img height="120" src="https://raw.githubusercontent.com/lobehub/lobe-assets/master/packages/assets-logo/assets/logo-3d.webp">
-<img height="120" src="https://raw.githubusercontent.com/lobehub/lobe-assets/master/packages/assets-logo/assets/split.svg">
-<img height="120" src="https://raw.githubusercontent.com/lobehub/fluent-emoji/master/packages/3d/assets/1f600.webp">
+![](https://github.com/user-attachments/assets/0a68d799-d7b4-44af-89c1-00ae8bbf3a1c)
+
 
 <h1>Fluent Emoji</h1>
 
@@ -23,9 +22,9 @@ For React developers who want the same emoji on every platform without bundling 
 
 [Changelog](./CHANGELOG.md) · [Report Bug][github-issues-link] · [Request Feature][github-issues-link]
 
-![](https://github.com/user-attachments/assets/b2b35675-b6dd-43d2-aea1-8139897dbfec)
-
 </div>
+
+<br/>
 
 ## 💡 Why Fluent Emoji?
 
