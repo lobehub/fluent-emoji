@@ -1,13 +1,21 @@
 'use client';
 
-import { ElementType, createElement, forwardRef, useMemo, useState } from 'react';
-import { type HTMLAttributes } from 'react';
+import {
+  createElement,
+  type ElementType,
+  type HTMLAttributes,
+  type Ref,
+  useMemo,
+  useState,
+} from 'react';
 
 import { getFluentEmojiCDN } from '@/getFluentEmojiCDN';
-import { EmojiType } from '@/getFluentEmojiCDN/utils';
+import type { EmojiType } from '@/getFluentEmojiCDN/utils';
 
-const createContainer = (as: ElementType) =>
-  forwardRef((props: any, ref) => createElement(as, { ...props, ref }));
+const createContainer =
+  (as: ElementType) =>
+  ({ ref, ...props }: { [key: string]: any; ref?: Ref<any> }) =>
+    createElement(as, { ...props, ref });
 
 export interface FluentEmojiProps extends HTMLAttributes<HTMLDivElement> {
   /**
@@ -25,6 +33,10 @@ export interface FluentEmojiProps extends HTMLAttributes<HTMLDivElement> {
    */
   emoji: string;
   /**
+   * Ref forwarded to the rendered image element.
+   */
+  ref?: Ref<any>;
+  /**
    * Width and height in pixels.
    * @default 40
    */
@@ -40,70 +52,66 @@ export interface FluentEmojiProps extends HTMLAttributes<HTMLDivElement> {
   unoptimized?: boolean;
 }
 
-const FluentEmoji = forwardRef<any, FluentEmojiProps>(
-  (
-    {
-      emoji,
-      className,
-      style,
-      type = '3d',
-      cdn = 'aliyun',
-      size = 40,
-      unoptimized,
-      as = 'img',
-      onError,
-    },
-    ref,
-  ) => {
-    const [loadingFail, setLoadingFail] = useState(false);
+const FluentEmoji = ({
+  ref,
+  emoji,
+  className,
+  style,
+  type = '3d',
+  cdn = 'aliyun',
+  size = 40,
+  unoptimized,
+  as = 'img',
+  onError,
+}: FluentEmojiProps) => {
+  const [loadingFail, setLoadingFail] = useState(false);
 
-    const ImgContainer = useMemo(() => createContainer(as), [as]);
+  const ImgContainer = useMemo(() => createContainer(as), [as]);
 
-    const emojiUrl = useMemo(() => {
-      if (type === 'pure') return null;
-      return getFluentEmojiCDN(emoji, { cdn, type });
-    }, [type, emoji]);
+  const emojiUrl = useMemo(() => {
+    if (type === 'pure') return null;
+    return getFluentEmojiCDN(emoji, { cdn, type });
+  }, [type, emoji, cdn]);
 
-    if (type === 'pure' || !emojiUrl || loadingFail)
-      return (
-        <div
-          className={className}
-          style={{
-            alignItems: 'center',
-            display: 'inline-flex',
-            fontSize: size,
-            height: size,
-            justifyContent: 'center',
-            lineHeight: 1,
-            position: 'relative',
-            textAlign: 'center',
-            verticalAlign: 'middle',
-            width: size,
-            ...style,
-          }}
-        >
-          {emoji}
-        </div>
-      );
-
+  if (type === 'pure' || !emojiUrl || loadingFail)
     return (
-      <ImgContainer
-        alt={emoji}
+      <div
         className={className}
-        height={size}
-        loading={'lazy'}
-        onError={(e: any) => {
-          setLoadingFail(true);
-          onError?.(e);
+        style={{
+          alignItems: 'center',
+          display: 'inline-flex',
+          fontSize: size,
+          height: size,
+          justifyContent: 'center',
+          lineHeight: 1,
+          position: 'relative',
+          textAlign: 'center',
+          verticalAlign: 'middle',
+          width: size,
+          ...style,
         }}
-        ref={ref}
-        src={emojiUrl}
-        style={{ flex: 'none', ...style }}
-        unoptimized={unoptimized}
-        width={size}
-      />
+      >
+        {emoji}
+      </div>
     );
-  },
-);
+
+  return (
+    <ImgContainer
+      alt={emoji}
+      className={className}
+      height={size}
+      loading={'lazy'}
+      ref={ref}
+      src={emojiUrl}
+      style={{ flex: 'none', ...style }}
+      unoptimized={unoptimized}
+      width={size}
+      onError={(e: any) => {
+        setLoadingFail(true);
+        onError?.(e);
+      }}
+    />
+  );
+};
 
 export default FluentEmoji;

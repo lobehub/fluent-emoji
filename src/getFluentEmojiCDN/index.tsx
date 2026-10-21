@@ -1,6 +1,7 @@
 import urlJoin from 'url-join';
 
-import { EmojiType, genEmojiUrl } from './utils';
+import type { EmojiType } from './utils';
+import { genEmojiUrl } from './utils';
 
 export interface FluentEmojiCdnConfig {
   /**
