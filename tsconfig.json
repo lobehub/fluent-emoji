@@ -1,8 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "declaration": true,
-    "downlevelIteration": true,
     "esModuleInterop": true,
     "jsx": "react-jsx",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -14,9 +12,9 @@
     "target": "es6",
     "types": ["vitest/globals"],
     "paths": {
-      "@/*": ["src/*"],
-      "@lobehub/fluent-emoji": ["src"],
-      "@lobehub/fluent-emoji/*": ["src/*"]
+      "@/*": ["./src/*"],
+      "@lobehub/fluent-emoji": ["./src"],
+      "@lobehub/fluent-emoji/*": ["./src/*"]
     }
   },
   "exclude": [".react-router"],
