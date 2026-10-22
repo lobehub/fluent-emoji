@@ -143,13 +143,15 @@ Contributions of all types are more than welcome, if you are interested in contr
 
 ## 🔗 Links
 
-- **[🍭 Lobe UI](https://github.com/lobehub/lobe-ui)** - React component library for AI applications
-- **[🥨 Lobe Icons](https://github.com/lobehub/lobe-icons)** - AI / LLM brand logo and icon collection
-- **[📊 Lobe Charts](https://github.com/lobehub/lobe-charts)** - React chart components library
+- **[🍭 Lobe UI](https://github.com/lobehub/lobe-ui)** - React component library for AI apps
+- **[🥨 Lobe Icons](https://github.com/lobehub/lobe-icons)** - AI / LLM brand logos and icons
+- **[📊 Lobe Charts](https://github.com/lobehub/lobe-charts)** - React chart components
 - **[✒️ Lobe Editor](https://github.com/lobehub/lobe-editor)** - Lexical-based rich text editor for React, with Markdown, plugins and a chat composer
 - **[🎤 Lobe TTS](https://github.com/lobehub/lobe-tts)** - TTS / STT speech library
 - **[📐 Lobe Lint](https://github.com/lobehub/lobe-lint)** - ESLint, Prettier, Stylelint, Commitlint and more lint configs
-- **[😀 Fluent Emoji](https://github.com/lobehub/fluent-emoji)** - Fluent Emoji asset library
+- **[😀 Fluent Emoji](https://github.com/lobehub/fluent-emoji)** - Fluent Emoji assets
+- **[📖 Docs Kit](https://github.com/lobehub/docs-kit)** - Reusable documentation toolkit and lobedocs CLI for LobeHub component libraries
+- **[🌊 Streamdown](https://github.com/lobehub/streamdown)** - Headless streaming markdown engine for React
 
 <div align="right">
 
