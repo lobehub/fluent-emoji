@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version&nbsp;5.0.1](https://github.com/lobehub/fluent-emoji/compare/v5.0.0...v5.0.1)
+
+<sup>Released on **2026-10-25**</sup>
+
+#### 🐛 Bug Fixes
+
+- **deps**: Stop shipping lucide-react and es-toolkit as runtime dependencies.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **deps**: Stop shipping lucide-react and es-toolkit as runtime dependencies ([6e0446a](https://github.com/lobehub/fluent-emoji/commit/6e0446a))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 5.0.0](https://github.com/lobehub/fluent-emoji/compare/v4.1.1...v5.0.0)
 
 <sup>Released on **2026-10-15**</sup>

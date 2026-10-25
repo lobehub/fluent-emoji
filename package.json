@@ -1,6 +1,6 @@
 {
   "name": "@lobehub/fluent-emoji",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Microsoft Fluent Emoji for React, one component in five styles (anim, 3d, modern, flat, mono) loaded from a CDN",
   "keywords": [
     "emoji",
@@ -31,6 +31,10 @@
   "types": "es/index.d.mts",
   "files": [
     "es"
+  ],
+  "workspaces": [
+    "*",
+    "packages/**"
   ],
   "scripts": {
     "build": "tsdown",
